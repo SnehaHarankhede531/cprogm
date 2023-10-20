@@ -1,0 +1,80 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+class Author{
+	private:	int bookid;
+				string A_name,b_name;
+				int no_book,tsal_book,avail_bk;
+				
+	public:
+				Author()
+				{
+					this->bookid=1209;
+					this->A_name="J K Rowling";
+					this->b_name="Harry Potter";
+					this->no_book=1300;
+					this->tsal_book=1250;
+				}
+				
+				Author(int bkid,string anm,string bnm,int no_bk,int t_bk)
+				{
+					this->bookid=bkid;
+					this->A_name=anm;
+					this->b_name=bnm;
+					this->no_book=no_bk;
+					this->tsal_book=t_bk;
+				}
+				
+				void setId(int bkid)
+				{
+					bookid=bkid;
+				}
+				
+				void setAname(string anm)
+				{
+					A_name=anm;
+				}
+				
+				void setBname(string bnm)
+				{
+					b_name=bnm;
+				}
+				
+				
+				int getId()
+				{
+					return bookid;
+				}
+				
+				string getAname()
+				{
+					return A_name;
+				}
+				string getBname()
+				{
+					return b_name;
+				}
+				
+				void accept()
+				{
+					cout<<"Enter the book Id"<<endl;
+					cin>>bookid;
+					cout<<"Enter the author name"<<endl;
+					cin>>A_name;
+					cout<<"Enter the book name"<<endl;
+					cin>>b_name;
+				}
+				
+				void Available_copies()
+				{
+					avail_bk=no_book-tsal_book;
+					cout<<"Total number of  copies available is "<<avail_bk<<endl;	
+				}
+				void display()
+				{
+					cout<<"BookId="<<bookid<<"Author Name="<<A_name<<"Book name"<<b_name<<endl;
+					cout<<"Number of published book"<<no_book<<endl;
+					cout<<"Number os sold Book"<<tsal_book<<endl;
+				}
+};

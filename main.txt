@@ -1,0 +1,21 @@
+#include<iostream>
+#include"prgmh.h"
+//using namespace std;
+
+int main()
+{
+	Author a1;
+	a1.display();
+	cout<<"--------"<,endl;
+	Author a2(1235,"Riya Anez","Fairy tales",1230,980);
+	a2.accept();
+	a2.Available_copies();
+	a2.display();
+	cout<<"--------"<,endl;
+	Author a3;
+	a3.setId(123);
+	a3.setAname("Neha Raut");
+	a3.setBname("Lights of fire");
+	cout<<"book id="<<a3.getId()<<"Author name="<<a3.getAname()<<"Book name="<<a3.getBname()<<endl;
+	return 0;
+}
